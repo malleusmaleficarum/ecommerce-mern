@@ -1,0 +1,13 @@
+const mongoose = require("mongoose");
+
+const JournalSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    image: { type: String, required: true },
+    categories: { type: Array, required: true },
+    desc: { type: String, required: true },
+  },
+  { timestamps: true }
+);
+
+module.exports = mongoose.model("Journal", JournalSchema);
